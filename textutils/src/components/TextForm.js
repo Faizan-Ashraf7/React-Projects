@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 export default function TextForm(props) {
+  const [text,setText]=useState("Enter text here");
   return (
     <div>
-      <h1>{props.heading}</h1>
+      <h1>{props.heading} - {text}</h1>
       <form>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
