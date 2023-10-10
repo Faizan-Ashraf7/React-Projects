@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function TextForm() {
+export default function TextForm(props) {
   return (
     <div>
+      <h1>{props.heading}</h1>
       <form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
