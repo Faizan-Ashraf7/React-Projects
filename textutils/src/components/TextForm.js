@@ -15,10 +15,10 @@ export default function TextForm(props) {
     <input type="password" class="form-control" id="exampleInputPassword1"/>
   </div>
   <div class="mb-3 form-check">
-    <label class="form-label" for="myBox">Example text area</label>
+    <label class="form-label" for="myBox"></label>
     <textarea  class="form-control" id="myBox" rows ="8"/>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button className="btn btn-primary">Convert to upper case</button>
 </form>
     </div>
   )
