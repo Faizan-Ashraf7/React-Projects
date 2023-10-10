@@ -1,10 +1,20 @@
 import React,{useState} from 'react'
 
 export default function TextForm(props) {
+  const handleUpClick=()=>{
+  // console.log(text.toUpperCase())
+  console.log(`Upper case was clicked`);
+  };
+  const handleOnChange=()=>{
+  // console.log(text.toUpperCase())
+  console.log(`On change`);
+  };
   const [text,setText]=useState("Enter text here");
+  // text=`new text`; //wrong way
+  // setText(`new text`); // correct way
   return (
     <div>
-      <h1>{props.heading} - {text}</h1>
+      <h1>{props.heading} </h1>
       <form>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -17,9 +27,9 @@ export default function TextForm(props) {
   </div>
   <div className="mb-3 form-check">
     <label className="form-label" htmlFor="myBox"></label>
-    <textarea  className="form-control" id="myBox" rows ="8"/>
+    <textarea  className="form-control" id="myBox" value={text} onChange={handleOnChange} rows ="8"/>
   </div>
-  <button className="btn btn-primary">Convert to upper case</button>
+  <button className="btn btn-primary" onClick={handleUpClick}>Convert to upper case</button>
 </form>
     </div>
   )
