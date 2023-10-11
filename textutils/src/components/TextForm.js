@@ -10,7 +10,7 @@ export default function TextForm(props) {
   // console.log(text.toUpperCase())
   console.log(`On change`);
   };
-  const [text,setText]=useState("");
+  const [text,setText]=useState("Watch it change");
   // text=`new text`; //wrong way
   // setText(`new text`); // correct way
   return (
