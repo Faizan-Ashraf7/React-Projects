@@ -8,7 +8,9 @@ function App() {
   <div className="container my-3">
   <TextForm heading="Enter the form data below"/>
   </div>
-  <div></div>
+  <div>
+    
+  </div>
     </>
   );
 }
