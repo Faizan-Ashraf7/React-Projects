@@ -1,16 +1,16 @@
 import React,{useState} from 'react'
 
 export default function TextForm(props) {
-  const handleUpClick=()=>{
+  const [text,setText]=useState("Enter your text");
+  const handleUpClick=(e)=>{
   // console.log(text.toUpperCase())
-  console.log(`Upper case was clicked`);
-  setText(`You've clicked on handle up click`)
+  e.preventDefault();
+  setText(`You've clicked on handle up click`);
   };
   const handleOnChange=()=>{
   // console.log(text.toUpperCase())
   console.log(`On change`);
   };
-  const [text,setText]=useState("Why is this happening");
   // text=`new text`; //wrong way
   // setText(`new text`); // correct way
   return (
