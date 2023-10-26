@@ -1,13 +1,16 @@
 import React,{useState} from 'react'
 
 export default function TextForm(props) {
-  const [text,setText]=useState("Enter your text");
+  const [text,setText]=useState("");
   const handleUpClick=(e)=>{
   e.preventDefault();
   setText(text.toUpperCase());
   };
   const handleLowClick=()=>{
     setText(text.toLowerCase());
+  };
+  const clearText=()=>{
+    setText("")
   };
   const handleOnChange=(event)=>{
   setText(event.target.value);
@@ -21,13 +24,14 @@ export default function TextForm(props) {
       <div>
     <textarea  className="form-control" id="myBox" value={text} onChange={handleOnChange} rows ="8"/>
     </div>
-  <button className="btn btn-primary mx-4 my-2" onClick={handleUpClick}>Convert to upper case</button>
-  <button className="btn btn-primary mx-4 my-2" onClick={handleLowClick}>Convert to lower case</button>
+  <button className="btn btn-dark mx-4 my-2 bg-dark" onClick={handleUpClick}>Convert to upper case</button>
+  <button className="btn btn-dark mx-4 my-2 bg-dark" onClick={handleLowClick}>Convert to lower case</button>
+  <button className="btn btn-dark mx-4 my-2 bg-dark" onClick={clearText}>Clear</button>
 
     </div>
 
     <div className="container my-4">
-      <h1>Your text summary</h1>
+      <h2>Your text summary</h2>
       <p> {text.length} Characters and {text.split(' ').length} Words
       </p>
       <p>
