@@ -4,11 +4,11 @@ export default function TextForm(props) {
   const [text,setText]=useState("Enter your text");
   const handleUpClick=(e)=>{
   e.preventDefault();
-  setText(`You've clicked on handle up click`);
+  setText(text.toUpperCase());
   };
-  const handleOnChange=()=>{
-  // console.log(text.toUpperCase())
+  const handleOnChange=(event)=>{
   console.log(`On change`);
+  setText(event.target.value);
   };
   // text=`new text`; //wrong way
   // setText(`new text`); // correct way
