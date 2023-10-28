@@ -12,7 +12,7 @@ function App() {
   <TextForm heading="Enter the text below to analyze"/>
   </div>
   <div>
-    {/* <About/> */}
+    <About/>
   </div>
     </>
   );
