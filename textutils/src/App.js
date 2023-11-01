@@ -6,9 +6,19 @@ import { useState } from "react";
 function App() {
   const [mode,setMode]= useState('light'); // Whether dark mode is enabled or not
   const toggleMode=()=>{
-    mode === 'light'?setMode('dark') : setMode('light');
+    if (mode === 'light') {
+      setMode('dark');
+      document.body.style.backgroundColor="black";
+      document.body.style.color="white";
+    } else {
+      setMode('light');
+      document.body.style.backgroundColor="white";
+      document.body.style.color="black";
+    }
+    // mode === 'light'
+    // ?setMode('dark') : setMode('light');
     
-    mode === 'light'?document.body.style.backgroundColor="black":document.body.style.backgroundColor="white";
+    // mode === 'light'?document.body.style.backgroundColor="black":document.body.style.backgroundColor="white";
   };
   return (
     <>
