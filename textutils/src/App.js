@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import { useState } from "react";
 function App() {
-  const [darkmode,setDarkMode]= useState(false); // Whether dark mode is enabled or not
-
+  const [mode,setMode]= useState('light'); // Whether dark mode is enabled or not
+  const toggleMode=()=>{
+    mode === 'light'?setMode(mode==='dark'): setMode(mode==='light');
+  };
   return (
     <>
     <div className="Navbar">
-  <Navbar title="TextUtils" mode={darkmode}/>
+  <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
   </div>
   <div className="container my-3">
   <TextForm heading="Enter the text below to analyze"/>
